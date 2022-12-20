@@ -1,0 +1,32 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component //class level annotation
+public class BikeRider {
+	
+	//Honda honda = new Honda(); tightly coupling 
+	//DI avoid TC
+	@Autowired //object level annotation
+	private Honda honda;
+	
+	private int regNo;
+	private String name;
+	public int getRegNo() {
+		return regNo;
+	}
+	public void setRegNo(int regNo) {
+		this.regNo = regNo;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void takeBike() {
+		honda.ride();
+	}
+}

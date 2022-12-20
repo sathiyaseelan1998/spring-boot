@@ -1,0 +1,19 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class IndexController {
+	@RequestMapping("home")
+	public String index() {
+		return "index.jsp";
+		
+	}
+	@RequestMapping("insertDB")
+	public String insertDB(Employee emp) {
+		System.out.println(emp.getId()+"---"+emp.getName());
+		return "inserted.jsp";
+		
+	}
+}

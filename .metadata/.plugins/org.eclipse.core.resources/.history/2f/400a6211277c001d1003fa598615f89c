@@ -1,0 +1,25 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Honda {
+	private int mileage;
+	private String model;
+	public int getMileage() {
+		return mileage;
+	}
+	public void setMileage(int mileage) {
+		this.mileage = mileage;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	
+	public void ride() {
+		System.out.println("honda riding");
+	}
+}
