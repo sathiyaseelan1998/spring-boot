@@ -1,5 +1,8 @@
 package com.example.myWebApp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +26,17 @@ public class EmployeeController {
 		mv.setViewName("insert.jsp");
 		return mv;
 		
+	}
+	@RequestMapping("view")
+	public ModelAndView viewAllData() {
+		ModelAndView mv=new ModelAndView();
+		List<EmployeeBo> list=new ArrayList<EmployeeBo>();
+		list=(List<EmployeeBo>) dao.findAll();
+		for(EmployeeBo e:list) {
+			System.out.println(e.getId()+"==="+e.getName());
+		}
+		mv.setViewName("insert.jsp");
+		return mv;
 	}
 
 }
