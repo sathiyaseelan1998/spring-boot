@@ -32,10 +32,11 @@ public class EmployeeController {
 		ModelAndView mv=new ModelAndView();
 		List<EmployeeBo> list=new ArrayList<EmployeeBo>();
 		list=(List<EmployeeBo>) dao.findAll();
+		mv.addObject("list", list);
 		for(EmployeeBo e:list) {
 			System.out.println(e.getId()+"==="+e.getName());
 		}
-		mv.setViewName("insert.jsp");
+		mv.setViewName("view.jsp");
 		return mv;
 	}
 
