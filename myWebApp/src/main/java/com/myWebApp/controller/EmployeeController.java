@@ -23,6 +23,19 @@
  * ModelAndView mv=new ModelAndView(); dao.save(bo); mv.addObject("name", bo);
  * mv.setViewName("insert.jsp"); return mv;
  * 
+ * 
+ * 
+ <!--  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency> --!>
+
+		 <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
+<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+    </dependency>
  * }
  * 
  * }
